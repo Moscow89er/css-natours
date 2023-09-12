@@ -22,6 +22,11 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2s;
+
+        @include respond(tab-land) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
     }
 
     &__left {
@@ -29,7 +34,8 @@
         display: table-cell;
 
         @include respond(tab-land) {
-            display: inline-block;
+            display: flex;
+            justify-content: space-between;
             width: 100%;
         }
     }
@@ -41,8 +47,8 @@
         padding: 3rem 5rem;
 
         @include respond(tab-land) {
+            display: block;
             width: 100%;
-            display: inline-block;
         }
     }
 
@@ -51,8 +57,7 @@
         width: 100%;
         
         @include respond(tab-land) {
-            display: inline-block;
-            width: 47%;
+            width: 50%;
             object-fit: cover;
         }
     }
